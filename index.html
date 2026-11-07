@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tap Me - Link in Bio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #7b68ee; /* Tono morado exacto de la referencia */
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-between py-8 px-4 text-white font-sans">
+
+    <!-- Contenedor Principal -->
+    <main class="w-full max-w-md flex flex-col items-center">
+
+        <!-- Círculo de Perfil / Logo -->
+        <div class="w-64 h-64 bg-white rounded-full flex flex-col items-center justify-center shadow-xl p-6 text-center mb-6">
+            <!-- Logo Tap Me SVG o Estilizado -->
+            <div class="text-slate-900 font-extrabold tracking-wider text-3xl flex items-center gap-1">
+                TAP<span class="text-indigo-600">ME</span>
+                <i class="fa-solid fa-wifi text-indigo-600 text-lg rotate-45 ml-1"></i>
+            </div>
+            <div class="w-36 border-t border-slate-400 my-2"></div>
+            <p class="text-[10px] tracking-widest text-slate-700 font-medium uppercase">
+                CONECTA CON UN TOQUE
+            </p>
+        </div>
+
+        <!-- Subtítulo de Autor -->
+        <div class="text-center mb-8">
+            <h2 class="text-sm font-bold tracking-widest">TAP ME</h2>
+            <p class="text-xs tracking-wider opacity-90">BY JULIANA BARREIRO</p>
+        </div>
+
+        <!-- Botones de Enlaces -->
+        <div class="w-full flex flex-col gap-4">
+
+            <!-- Botón 1: Guardar Contacto (Nuevo / Primero) -->
+            <a href="data:text/vcard;charset=utf-8,BEGIN:VCARD%0AVERSION:3.0%0AFN:Tap Me - Juliana Barreiro%0AORG:Tap Me%0ATITLE:NFC Cards & Link-in-Bio%0ATEL;TYPE=CELL:+593988725270%0AEND:VCARD" download="contacto.vcf" class="flex items-center justify-between border border-white/70 rounded-full px-5 py-3.5 bg-white/10 hover:bg-white/20 transition-all duration-300 backdrop-blur-sm group">
+                <div class="flex items-center gap-4">
+                    <div class="w-8 h-8 rounded-full border border-white/60 flex items-center justify-center text-sm">
+                        <i class="fa-solid fa-address-card"></i>
+                    </div>
+                    <span class="text-sm font-semibold tracking-wider">GUARDAR CONTACTO</span>
+                </div>
+                <i class="fa-solid fa-arrow-right text-sm transition-transform group-hover:translate-x-1"></i>
+            </a>
+
+            <!-- Botón 2: WhatsApp -->
+            <a href="https://wa.me/593988725270" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between border border-white/70 rounded-full px-5 py-3.5 bg-white/10 hover:bg-white/20 transition-all duration-300 backdrop-blur-sm group">
+                <div class="flex items-center gap-4">
+                    <div class="w-8 h-8 rounded-full border border-white/60 flex items-center justify-center text-sm">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+                    <span class="text-sm font-semibold tracking-wider">WHATSAPP</span>
+                </div>
+                <i class="fa-solid fa-arrow-right text-sm transition-transform group-hover:translate-x-1"></i>
+            </a>
+
+            <!-- Botón 3: Reseña de Google -->
+            <a href="#" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between border border-white/70 rounded-full px-5 py-3.5 bg-white/10 hover:bg-white/20 transition-all duration-300 backdrop-blur-sm group">
+                <div class="flex items-center gap-4">
+                    <div class="w-8 h-8 rounded-full border border-white/60 flex items-center justify-center text-sm">
+                        <i class="fa-solid fa-g"></i>
+                    </div>
+                    <span class="text-sm font-semibold tracking-wider">RESEÑA DE GOOGLE</span>
+                </div>
+                <i class="fa-solid fa-arrow-right text-sm transition-transform group-hover:translate-x-1"></i>
+            </a>
+
+            <!-- Botón 4: Instagram -->
+            <a href="#" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between border border-white/70 rounded-full px-5 py-3.5 bg-white/10 hover:bg-white/20 transition-all duration-300 backdrop-blur-sm group">
+                <div class="flex items-center gap-4">
+                    <div class="w-8 h-8 rounded-full border border-white/60 flex items-center justify-center text-sm">
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                    <span class="text-sm font-semibold tracking-wider">INSTAGRAM</span>
+                </div>
+                <i class="fa-solid fa-arrow-right text-sm transition-transform group-hover:translate-x-1"></i>
+            </a>
+
+            <!-- Botón 5: TikTok -->
+            <a href="#" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between border border-white/70 rounded-full px-5 py-3.5 bg-white/10 hover:bg-white/20 transition-all duration-300 backdrop-blur-sm group">
+                <div class="flex items-center gap-4">
+                    <div class="w-8 h-8 rounded-full border border-white/60 flex items-center justify-center text-sm">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </div>
+                    <span class="text-sm font-semibold tracking-wider">TIK TOK</span>
+                </div>
+                <i class="fa-solid fa-arrow-right text-sm transition-transform group-hover:translate-x-1"></i>
+            </a>
+
+            <!-- Botón 6: Formulario -->
+            <a
