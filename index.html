@@ -33,7 +33,7 @@
         <!-- Botones de Enlaces -->
         <div class="w-full flex flex-col gap-4">
 
-            <!-- Botón 1: Guardar Contacto (Con JS optimizado) -->
+            <!-- Botón 1: Guardar Contacto -->
             <button onclick="descargarVCard()" class="w-full flex items-center justify-between border border-white/70 rounded-full px-5 py-3.5 bg-white/10 hover:bg-white/20 transition-all duration-300 backdrop-blur-sm group cursor-pointer">
                 <div class="flex items-center gap-4">
                     <div class="w-8 h-8 rounded-full border border-white/60 flex items-center justify-center text-sm">
@@ -92,13 +92,14 @@
 
     </main>
 
-    <!-- Script de descarga de contacto vCard -->
+    <!-- Script de descarga de contacto vCard con Nombre y Apellido separados -->
     <script>
         function descargarVCard() {
             const vcardData = 
 `BEGIN:VCARD
 VERSION:3.0
-FN:Tap Me - Juliana Barreiro
+N:Barreiro;Juliana;;;
+FN:Juliana Barreiro
 ORG:Tap Me
 TITLE:NFC Cards & Link-in-Bio
 TEL;TYPE=CELL:+593988725270
