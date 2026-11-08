@@ -33,8 +33,8 @@
         <!-- Botones de Enlaces -->
         <div class="w-full flex flex-col gap-4">
 
-            <!-- Botón 1: Guardar Contacto -->
-            <a href="data:text/vcard;charset=utf-8,BEGIN:VCARD%0AVERSION:3.0%0AFN:Tap Me - Juliana Barreiro%0AORG:Tap Me%0ATITLE:NFC Cards & Link-in-Bio%0ATEL;TYPE=CELL:+593988725270%0AEND:VCARD" download="contacto.vcf" class="flex items-center justify-between border border-white/70 rounded-full px-5 py-3.5 bg-white/10 hover:bg-white/20 transition-all duration-300 backdrop-blur-sm group">
+            <!-- Botón 1: Guardar Contacto (Con JS optimizado) -->
+            <button onclick="descargarVCard()" class="w-full flex items-center justify-between border border-white/70 rounded-full px-5 py-3.5 bg-white/10 hover:bg-white/20 transition-all duration-300 backdrop-blur-sm group cursor-pointer">
                 <div class="flex items-center gap-4">
                     <div class="w-8 h-8 rounded-full border border-white/60 flex items-center justify-center text-sm">
                         <i class="fa-solid fa-address-card"></i>
@@ -42,7 +42,7 @@
                     <span class="text-sm font-semibold tracking-wider">GUARDAR CONTACTO</span>
                 </div>
                 <i class="fa-solid fa-arrow-right text-sm transition-transform group-hover:translate-x-1"></i>
-            </a>
+            </button>
 
             <!-- Botón 2: WhatsApp -->
             <a href="https://wa.me/593988725270" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between border border-white/70 rounded-full px-5 py-3.5 bg-white/10 hover:bg-white/20 transition-all duration-300 backdrop-blur-sm group">
@@ -91,6 +91,30 @@
         </div>
 
     </main>
+
+    <!-- Script de descarga de contacto vCard -->
+    <script>
+        function descargarVCard() {
+            const vcardData = 
+`BEGIN:VCARD
+VERSION:3.0
+FN:Tap Me - Juliana Barreiro
+ORG:Tap Me
+TITLE:NFC Cards & Link-in-Bio
+TEL;TYPE=CELL:+593988725270
+URL:https://wa.me/593988725270
+END:VCARD`;
+
+            const blob = new Blob([vcardData], { type: 'text/vcard;charset=utf-8;' });
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.setAttribute('download', 'contacto-tapme.vcf');
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
 
 </body>
 </html>
